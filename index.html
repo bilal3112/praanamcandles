@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praanam Candles - Elevated Moments, Lit by Luxury</title>
+    <title>Praanam Candles - Where Life Meets Light</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,42 +71,75 @@
         #product-modal .modal-content {
             transition: transform 0.3s ease;
         }
+        /* Marquee Animation */
+        .marquee-content {
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0%); }
+            to { transform: translateX(-100%); }
+        }
     </style>
 </head>
 <body class="bg-violet-50 text-stone-800 font-body">
 
+    <!-- Offer Marquee -->
+    <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center py-2.5 text-sm font-semibold overflow-hidden whitespace-nowrap">
+        <div class="marquee-content inline-block">
+            <span class="mx-12">✨ Free Shipping on Orders Over ₹3000 ✨</span>
+            <span class="mx-12">Limited Time Offer: Buy 2 Get 1 Free on Select Scents!</span>
+            <span class="mx-12">✨ Sign Up & Get 15% Off Your First Order ✨</span>
+        </div>
+        <div class="marquee-content inline-block" aria-hidden="true">
+            <span class="mx-12">✨ Free Shipping on Orders Over ₹3000 ✨</span>
+            <span class="mx-12">Limited Time Offer: Buy 2 Get 1 Free on Select Scents!</span>
+            <span class="mx-12">✨ Sign Up & Get 15% Off Your First Order ✨</span>
+        </div>
+    </div>
+
+
     <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-40">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-5xl font-brand text-purple-900">Praanam</h1>
             <nav class="hidden md:flex space-x-8 text-sm tracking-wider uppercase">
                 <a href="#home" class="text-purple-700 hover:text-purple-900 transition-colors duration-300">Home</a>
                 <a href="#about" class="text-purple-700 hover:text-purple-900 transition-colors duration-300">About</a>
                 <a href="#shop" class="text-purple-700 hover:text-purple-900 transition-colors duration-300">Shop</a>
+                <a href="#offers" class="text-purple-700 hover:text-purple-900 transition-colors duration-300">Offers</a>
                 <a href="#gifting" class="text-purple-700 hover:text-purple-900 transition-colors duration-300">Gifting</a>
                 <a href="#contact" class="text-purple-700 hover:text-purple-900 transition-colors duration-300">Contact</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-purple-900">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white">
-            <a href="#home" class="block py-3 px-6 text-sm text-purple-700 hover:bg-violet-100 hover:text-purple-900">Home</a>
-            <a href="#about" class="block py-3 px-6 text-sm text-purple-700 hover:bg-violet-100 hover:text-purple-900">About</a>
-            <a href="#shop" class="block py-3 px-6 text-sm text-purple-700 hover:bg-violet-100 hover:text-purple-900">Shop</a>
-            <a href="#gifting" class="block py-3 px-6 text-sm text-purple-700 hover:bg-violet-100 hover:text-purple-900">Gifting</a>
-            <a href="#contact" class="block py-3 px-6 text-sm text-purple-700 hover:bg-violet-100 hover:text-purple-900">Contact</a>
-        </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-violet-50 z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="flex justify-end p-6">
+            <button id="mobile-menu-close-button">
+                <svg class="w-8 h-8 text-purple-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center h-full -mt-20">
+            <a href="#home" class="font-heading text-4xl text-purple-800 my-4 hover:text-purple-600 transition-colors">Home</a>
+            <a href="#about" class="font-heading text-4xl text-purple-800 my-4 hover:text-purple-600 transition-colors">About</a>
+            <a href="#shop" class="font-heading text-4xl text-purple-800 my-4 hover:text-purple-600 transition-colors">Shop</a>
+            <a href="#offers" class="font-heading text-4xl text-purple-800 my-4 hover:text-purple-600 transition-colors">Offers</a>
+            <a href="#gifting" class="font-heading text-4xl text-purple-800 my-4 hover:text-purple-600 transition-colors">Gifting</a>
+            <a href="#contact" class="font-heading text-4xl text-purple-800 my-4 hover:text-purple-600 transition-colors">Contact</a>
+        </nav>
+    </div>
 
     <main>
         <!-- Hero Section -->
         <section id="home" class="relative h-screen bg-cover bg-center" style="background-image: url('assets/hero-background.png');">
             <div class="absolute inset-0 bg-black opacity-40"></div>
             <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-                <h2 class="text-5xl md:text-7xl font-heading mb-4 hero-text-animate">Elevated Moments, Lit by Luxury</h2>
-                <p class="text-lg md:text-xl mb-8 max-w-2xl font-light hero-text-animate-p">Handmade candles for modern souls, crafted to transform your space and elevate your everyday.</p>
+                <h2 class="text-5xl md:text-7xl font-heading mb-4 hero-text-animate">Where Life Meets Light</h2>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl font-light hero-text-animate-p">A space where nature, light, and soulful moments come together to bring calm, warmth, and elegance into your life.</p>
                 <a href="#shop" class="bg-white text-purple-900 font-bold py-3 px-8 rounded-full hover:bg-violet-100 transition-colors duration-300 tracking-wider uppercase hero-text-animate-a">Explore</a>
             </div>
         </section>
@@ -202,15 +235,35 @@
                 </div>
             </div>
         </section>
+
+        <!-- Offers Section -->
+        <section id="offers" class="py-24 bg-violet-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                 <div class="text-center">
+                    <h3 class="text-4xl md:text-5xl font-heading mb-6 text-purple-900">Exclusive Offers</h3>
+                    <p class="text-stone-600 max-w-2xl mx-auto mb-12">Don't miss out on our special promotions, designed to bring you more moments of luxury.</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden md:flex items-center">
+                    <div class="md:w-1/2">
+                        <img src="assets/offer-image.png" alt="Special Offer Candles" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-12 text-center md:text-left">
+                         <h4 class="text-3xl font-heading mb-4">Buy 2, Get 1 Free</h4>
+                         <p class="text-stone-600 mb-6">For a limited time, purchase any two of our signature candles and receive a third one absolutely free. The perfect opportunity to explore new scents or stock up on your favorites.</p>
+                         <a href="#shop" class="inline-block bg-purple-800 text-white font-bold py-3 px-8 rounded-full hover:bg-purple-700 transition-colors duration-300 tracking-wider uppercase">Shop The Collection</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- Gifting Section -->
-        <section id="gifting" class="py-24 bg-violet-50 fade-in-section">
+        <section id="gifting" class="py-24 bg-white fade-in-section">
             <div class="container mx-auto px-6">
                  <div class="text-center">
                     <h3 class="text-4xl md:text-5xl font-heading mb-6 text-purple-900">Curated Gifting</h3>
                     <p class="text-stone-600 max-w-2xl mx-auto mb-12">Thoughtfully curated gift sets for every occasion. Give the gift of an elevated moment.</p>
                 </div>
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden md:flex items-center">
+                <div class="bg-violet-50 rounded-2xl shadow-lg overflow-hidden md:flex items-center">
                     <div class="md:w-1/2">
                         <img src="assets/gift-set.png" alt="Praanam Candle Gift Set" class="w-full h-full object-cover">
                     </div>
@@ -225,7 +278,7 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section class="py-24 bg-white fade-in-section">
+        <section class="py-24 bg-violet-50 fade-in-section">
             <div class="container mx-auto px-6">
                 <h3 class="text-4xl md:text-5xl font-heading text-center mb-16 text-purple-900">Kind Words</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
@@ -246,7 +299,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-24 bg-violet-50 fade-in-section">
+        <section id="contact" class="py-24 bg-white fade-in-section">
             <div class="container mx-auto px-6">
                 <div class="max-w-xl mx-auto text-center">
                     <h3 class="text-4xl md:text-5xl font-heading mb-6 text-purple-900">Get In Touch</h3>
@@ -311,26 +364,46 @@
     </div>
 
     <script>
-        // Mobile menu toggle
+        // --- Elements ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuCloseButton = document.getElementById('mobile-menu-close-button');
+        const allNavLinks = document.querySelectorAll('a[href^="#"]');
+        const modal = document.getElementById('product-modal');
+        const modalContent = modal.querySelector('.modal-content');
+        const modalImg = document.getElementById('modal-img');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+        const modalPrice = document.getElementById('modal-price');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const productCards = document.querySelectorAll('.product-card');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        // --- Mobile Menu Logic ---
+        const openMobileMenu = () => mobileMenu.classList.remove('translate-x-full');
+        const closeMobileMenu = () => mobileMenu.classList.add('translate-x-full');
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        mobileMenuCloseButton.addEventListener('click', closeMobileMenu);
+
+        // --- Smooth Scroll & Menu Close on Link Click ---
+        allNavLinks.forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
+                const scrollTarget = document.querySelector(this.getAttribute('href'));
+                
+                if (mobileMenu.contains(this)) {
+                    closeMobileMenu();
+                    // Add a delay to allow the menu to close before scrolling
+                    setTimeout(() => {
+                        scrollTarget.scrollIntoView({ behavior: 'smooth' });
+                    }, 300); // Match menu transition duration
+                } else {
+                    scrollTarget.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
 
-        // Fade-in animation on scroll
+        // --- Fade-in animation on scroll ---
         const sections = document.querySelectorAll('.fade-in-section');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -344,16 +417,7 @@
             observer.observe(section);
         });
 
-        // Product Modal Logic
-        const modal = document.getElementById('product-modal');
-        const modalContent = modal.querySelector('.modal-content');
-        const modalImg = document.getElementById('modal-img');
-        const modalTitle = document.getElementById('modal-title');
-        const modalDescription = document.getElementById('modal-description');
-        const modalPrice = document.getElementById('modal-price');
-        const closeBtn = document.getElementById('modal-close-btn');
-        const productCards = document.querySelectorAll('.product-card');
-
+        // --- Product Modal Logic ---
         const openModal = (card) => {
             modalImg.src = card.dataset.img;
             modalTitle.textContent = card.dataset.title;
@@ -365,7 +429,7 @@
             setTimeout(() => {
                 modal.classList.remove('opacity-0');
                 modalContent.classList.remove('scale-95');
-            }, 10); // small delay to allow display change
+            }, 10);
         };
 
         const closeModal = () => {
@@ -374,21 +438,20 @@
             setTimeout(() => {
                 modal.classList.add('hidden');
                 modal.classList.remove('flex');
-            }, 300); // match transition duration
+            }, 300);
         };
 
         productCards.forEach(card => {
             card.addEventListener('click', () => openModal(card));
         });
 
-        closeBtn.addEventListener('click', closeModal);
+        modalCloseBtn.addEventListener('click', closeModal);
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 closeModal();
             }
         });
         
-        // Close modal on escape key press
         document.addEventListener('keydown', (e) => {
             if (e.key === "Escape" && !modal.classList.contains('hidden')) {
                 closeModal();
