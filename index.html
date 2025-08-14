@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praanam Candles - Elevated Moments, Lit by Luxury</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .font-brand {
+            font-family: 'Great Vibes', cursive;
+        }
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* For the fade-in animation on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px); /* Increased for a more noticeable effect */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-rose-50 text-stone-800 font-body">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-5xl font-brand text-stone-900">Praanam</h1>
+            <nav class="hidden md:flex space-x-8 text-sm tracking-wider uppercase">
+                <a href="#home" class="text-stone-600 hover:text-stone-900 transition-colors duration-300">Home</a>
+                <a href="#about" class="text-stone-600 hover:text-stone-900 transition-colors duration-300">About</a>
+                <a href="#shop" class="text-stone-600 hover:text-stone-900 transition-colors duration-300">Shop</a>
+                <a href="#contact" class="text-stone-600 hover:text-stone-900 transition-colors duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-stone-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#home" class="block py-3 px-6 text-sm text-stone-600 hover:bg-rose-50">Home</a>
+            <a href="#about" class="block py-3 px-6 text-sm text-stone-600 hover:bg-rose-50">About</a>
+            <a href="#shop" class="block py-3 px-6 text-sm text-stone-600 hover:bg-rose-50">Shop</a>
+            <a href="#contact" class="block py-3 px-6 text-sm text-stone-600 hover:bg-rose-50">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative h-screen bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/f9f5f3/5d4037?text=Praanam');">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+                <h2 class="text-5xl md:text-7xl font-heading mb-4">Elevated Moments, Lit by Luxury</h2>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl font-light">Handmade candles for modern souls, crafted to transform your space and elevate your everyday.</p>
+                <a href="#shop" class="bg-white text-stone-800 font-bold py-3 px-8 rounded-full hover:bg-rose-50 transition-colors duration-300 tracking-wider uppercase">Explore</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-white fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-4xl md:text-5xl font-heading mb-6 text-stone-900">The Praanam Philosophy</h3>
+                <p class="text-stone-600 max-w-3xl mx-auto leading-relaxed">
+                    At Praanam, we believe in the power of scent to create moments of peace and elegance. Inspired by India's rich heritage of aromas, our candles are meticulously handcrafted using all-natural soy wax, premium fragrance oils, and cotton wicks. Each candle is a testament to our commitment to quality, sustainability, and the art of modern luxury.
+                </p>
+            </div>
+        </section>
+
+        <!-- Shop Section -->
+        <section id="shop" class="py-24 bg-rose-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl md:text-5xl font-heading text-center mb-16 text-stone-900">Featured Collection</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Product Card -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <div class="overflow-hidden">
+                           <img src="https://placehold.co/600x400/f1e4e0/5d4037?text=Mysore+Sandalwood" alt="Mysore Sandalwood & Vanilla Bean Candle" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 text-center">
+                            <h4 class="text-2xl font-semibold mb-2 font-heading">Mysore Sandalwood</h4>
+                            <p class="text-stone-600 mb-6 text-sm">A warm, woody aroma of authentic Mysore sandalwood with a hint of sweet vanilla.</p>
+                            <span class="text-lg font-semibold text-stone-800 mb-6 block">₹2,500</span>
+                            <button class="bg-stone-800 text-white font-bold py-3 px-6 rounded-full hover:bg-stone-700 transition-colors duration-300 w-full tracking-wider uppercase">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Product Card -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                         <div class="overflow-hidden">
+                            <img src="https://placehold.co/600x400/f1e4e0/5d4037?text=Kashmiri+Lavender" alt="Kashmiri Lavender & Chamomile Candle" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 text-center">
+                            <h4 class="text-2xl font-semibold mb-2 font-heading">Kashmiri Lavender</h4>
+                            <p class="text-stone-600 mb-6 text-sm">A calming blend of floral Kashmiri lavender and soothing chamomile, ideal for relaxation.</p>
+                             <span class="text-lg font-semibold text-stone-800 mb-6 block">₹2,500</span>
+                            <button class="bg-stone-800 text-white font-bold py-3 px-6 rounded-full hover:bg-stone-700 transition-colors duration-300 w-full tracking-wider uppercase">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Product Card -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <div class="overflow-hidden">
+                           <img src="https://placehold.co/600x400/f1e4e0/5d4037?text=Himalayan+Citrus" alt="Himalayan Citrus & Bergamot Candle" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 text-center">
+                            <h4 class="text-2xl font-semibold mb-2 font-heading">Himalayan Citrus</h4>
+                            <p class="text-stone-600 mb-6 text-sm">An uplifting and refreshing scent of zesty Himalayan citrus and bergamot to brighten your space.</p>
+                            <span class="text-lg font-semibold text-stone-800 mb-6 block">₹2,500</span>
+                            <button class="bg-stone-800 text-white font-bold py-3 px-6 rounded-full hover:bg-stone-700 transition-colors duration-300 w-full tracking-wider uppercase">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-24 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl md:text-5xl font-heading text-center mb-16 text-stone-900">Kind Words</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                    <div class="p-8">
+                        <p class="text-stone-600 mb-6 italic text-lg">"The Mysore Sandalwood candle is divine! It fills my home with such a warm and inviting scent. I'm obsessed!"</p>
+                        <p class="font-semibold tracking-wider text-sm uppercase">- Jessica M.</p>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-stone-600 mb-6 italic text-lg">"Praanam candles are my new go-to for gifts. They are so elegant and smell incredible. The quality is top-notch."</p>
+                        <p class="font-semibold tracking-wider text-sm uppercase">- David L.</p>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-stone-600 mb-6 italic text-lg">"I love that these candles are all-natural. The Kashmiri Lavender is so calming, perfect for my evening routine."</p>
+                        <p class="font-semibold tracking-wider text-sm uppercase">- Sarah K.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-rose-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="max-w-xl mx-auto text-center">
+                    <h3 class="text-4xl md:text-5xl font-heading mb-6 text-stone-900">Get In Touch</h3>
+                    <p class="text-stone-600 mb-8">Have a question or a special request? We'd love to hear from you. Fill out the form below or connect with us on Instagram.</p>
+                    <form>
+                        <div class="mb-4">
+                            <input type="text" placeholder="Your Name" class="w-full p-4 rounded-lg border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-rose-200 transition-shadow">
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" placeholder="Your Email" class="w-full p-4 rounded-lg border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-rose-200 transition-shadow">
+                        </div>
+                        <div class="mb-4">
+                            <textarea placeholder="Your Message" rows="5" class="w-full p-4 rounded-lg border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-rose-200 transition-shadow"></textarea>
+                        </div>
+                        <button type="submit" class="bg-stone-800 text-white font-bold py-3 px-8 rounded-full hover:bg-stone-700 transition-colors duration-300 tracking-wider uppercase">Send Message</button>
+                    </form>
+                    <div class="mt-8">
+                        <a href="https://ig.me/m/praanam_candles" target="_blank" class="inline-flex items-center justify-center bg-gradient-to-r from-pink-500 to-orange-400 text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition-opacity duration-300 tracking-wider uppercase">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7.177a4.823 4.823 0 100 9.646 4.823 4.823 0 000-9.646zm0 7.94a3.117 3.117 0 110-6.234 3.117 3.117 0 010 6.234zm6.375-9.27a1.148 1.148 0 10-2.296 0 1.148 1.148 0 002.296 0z" clip-rule="evenodd" />
+                            </svg>
+                            DM on Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12">
+        <div class="container mx-auto px-6 text-center text-stone-600">
+            <div class="mb-6">
+                <a href="#" class="mx-3 hover:text-stone-900 transition-colors duration-300">Facebook</a>
+                <a href="https://www.instagram.com/praanam_candles" target="_blank" class="mx-3 hover:text-stone-900 transition-colors duration-300">Instagram</a>
+                <a href="#" class="mx-3 hover:text-stone-900 transition-colors duration-300">Pinterest</a>
+            </div>
+            <p class="text-sm">&copy; 2024 Praanam Candles. All Rights Reserved.</p>
+            <p class="text-2xl font-brand text-stone-500 mt-4">Crafted by Asad</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu on link click
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Fade-in animation on scroll
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Optional: stop observing once it's visible
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15 // A little more of the element should be visible before animating
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
